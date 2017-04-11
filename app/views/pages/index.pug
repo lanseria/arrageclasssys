@@ -1,0 +1,43 @@
+extends ../layout
+
+block content
+  form.form-inline(method="POST", action="/uploadXls", enctype="multipart/form-data")
+    .form-group
+      h3
+        i.fa.fa-angle-right
+        |  提交课表(首先下载右侧模板文件)
+    .form-group
+      input#upload(type="file", name="uploadXls", accept=".xls")
+    .form-group
+      label 你的姓名
+      input.form-control#name(type="text", name="uploadName")
+    .form-group
+      label 你的学号
+      input.form-control#number(type="text", name="uploadNumber")
+    .form-group
+      button.btn.btn-success(type='submit') 提交
+    .form-group
+      a.btn.btn-info(href="/demofiles/demo.xls") 模板文件下载
+  .row
+    .col-md-12.mt
+      .content-panel
+        table.table.table-hover
+          h4
+            i.fa.fa-angle-right
+            |  已有名单
+          hr
+          thead
+            tr
+              th #
+              th 姓名
+              th 学号
+              th 状态
+              th 时间
+          tbody
+            each item, idx in members
+              tr
+                td #{idx}
+                td #{item.name}
+                td #{item.number}
+                td #{item.status}
+                td #{moment(item.meta.createAt).format('MM/DD/YYYY')}
