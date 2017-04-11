@@ -24,7 +24,6 @@ app.set('view engine', 'pug');
 
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.png')));
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
@@ -37,6 +36,8 @@ app.use(session({
     collection: 'sessions'
   })
 }));
+app.use(express.static(path.join(__dirname, 'public')));
+
 var env = process.env.NODE_ENV || 'development';
 
 if('development' === env){
