@@ -1,13 +1,12 @@
 extends ../layout
 
 block content
+  h3
+    i.fa.fa-angle-right
+    |  提交课表(首先下载模板文件
+    a.btn.btn-info(href="/demofiles/demo.xls") 下载
+    | 将你的有课信息填完之后,再上传到这,并填上你的信息)
   form.form-inline(method="POST", action="/uploadXls", enctype="multipart/form-data")
-    .form-group
-      h3
-        i.fa.fa-angle-right
-        |  提交课表(首先下载模板文件
-        a.btn.btn-info(href="/demofiles/demo.xls") 下载
-        | 将你的有课信息填完之后,再上传到这,并填上你的信息)
     .form-group
       input#upload(type="file", name="uploadXls", accept=".xls")
     .form-group
