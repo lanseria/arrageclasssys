@@ -5,7 +5,9 @@ block content
     .form-group
       h3
         i.fa.fa-angle-right
-        |  提交课表(首先下载右侧模板文件)
+        |  提交课表(首先下载
+        a.btn.btn-info(href="/demofiles/demo.xls") 模板文件下载
+        | )
     .form-group
       input#upload(type="file", name="uploadXls", accept=".xls")
     .form-group
@@ -16,8 +18,6 @@ block content
       input.form-control#number(type="text", name="uploadNumber")
     .form-group
       button.btn.btn-success(type='submit') 提交
-    .form-group
-      a.btn.btn-info(href="/demofiles/demo.xls") 模板文件下载
   .row
     .col-md-12.mt
       .content-panel
