@@ -101,7 +101,7 @@ ArrageClass.prototype.execute = function(callback) {
           cmd = 'allot.exe < tmp.txt > results.txt';
         }
         if (process.platform=='linux') {
-          cmd = 'allot.out < tmp.txt > results.txt';
+          cmd = './allot.out < tmp.txt > results.txt';
         }
         exec(cmd, function(err, stdout, stderr){
           if (err) return callback(err);
