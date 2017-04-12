@@ -26,7 +26,7 @@ ArrageClass.prototype.writexlsx = function(data, strarr, callback) {
   var cb = this.row;
   for (var i = 1; i <= this.row; i++) {
     (function(i){
-      var h = strarr[i].split(/\s/);
+      var h = strarr[i].split(/[\s]{1}/);
       //console.log(h[0],h[1],h[2],h[3],h[4],h[5]);
       var _data = { No: i,
                     Mon: h[0],
