@@ -97,10 +97,10 @@ ArrageClass.prototype.execute = function(callback) {
         if(err) return callback(err);
         console.log('It\'s saved!');
         var cmd = null;
-        if (proceess.platform=='win32') {
+        if (process.platform=='win32') {
           cmd = 'allot.exe < tmp.txt > results.txt';
         }
-        if (proceess.platform=='linux') {
+        if (process.platform=='linux') {
           cmd = 'allot.out < tmp.txt > results.txt';
         }
         exec(cmd, function(err, stdout, stderr){
