@@ -26,7 +26,7 @@ ArrageClass.prototype.writexlsx = function(data, strarr, callback) {
   var cb = this.row;
   for (var i = 1; i <= this.row; i++) {
     (function(i){
-      var h = strarr[i].split(/,/);
+      var h = strarr[i].split(/\s/);
       //console.log(h[0],h[1],h[2],h[3],h[4],h[5]);
       var _data = { No: i,
                     Mon: h[0],
@@ -35,7 +35,7 @@ ArrageClass.prototype.writexlsx = function(data, strarr, callback) {
                     Thu: h[3],
                     Fri: h[4],
                     Sat: h[5],
-                    Sun: '暂时无',
+                    Sun: h[6],
                    };
       data.push(_data);
       // console.log(data);
