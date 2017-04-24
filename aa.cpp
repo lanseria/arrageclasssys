@@ -7,7 +7,7 @@ struct member
     string name;
     vector<int>vec;
     int many;
-    member():vec(5*7+1, 1), many(0) {}
+    member():vec(10*7+1, 1), many(0) {}
 };
 
 struct config
