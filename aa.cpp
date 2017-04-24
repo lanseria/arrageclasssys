@@ -37,7 +37,7 @@ void input()
     }
 }
 
-void find_noclass_students(vector<vector<int>>&No_class)
+void find_noclass_students(vector<vector<int> >&No_class)
 {
     for(int i = 0; i < all.size(); ++ i)
     {
@@ -82,7 +82,7 @@ vector<int> find_best_arrange(vector<int> &arr)
 
 void BinaryMatch()
 {
-    vector<vector<int>>No_class(conf.row*conf.col+1);
+    vector<vector<int> >No_class(conf.row*conf.col+1);
 
     //将所有没课的情况全部记录在一个课表上
     find_noclass_students(No_class);
