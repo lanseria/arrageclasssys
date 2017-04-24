@@ -32,9 +32,9 @@ exports.demofiles = function(req, res){
 
 exports.download = function(req, res){
   var client = new ArrageClass({
-    'row': 4,
+    'row': 6,
     'col': 5,
-    'many': 3,
+    'many': 100,
   })
   var suc = client.execute(function(err, suc){
     if (err) {console.log(err);}
