@@ -7,8 +7,15 @@ block content
       |  提交课表(首先下载模板文件
       a.btn.btn-info(href="/demofiles/demo.xls") 下载
       | 将你的有课信息填完之后,再上传到这,并填上你的信息)
-    div
-      img(src="/images/demo.png", alt="demo")
+    div.row
+      div.col-md-6
+
+        img(src="/images/plan.png", alt="plan")
+      div.col-md-6
+        h4 注意
+        p 请严格按照时间表提交课表
+        img(src="/images/demo.png", alt="demo")
+
     form.form-inline(method="POST", action="/uploadXls", enctype="multipart/form-data")
       .form-group
         label XLS文件
