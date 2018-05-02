@@ -11,7 +11,7 @@ var mongoStore = require('connect-mongo')(session);
 
 //config
 // var config = require('./config');
-var dbUrl = 'mongodb://localhost/classplan';
+var dbUrl = 'mongodb://mongo/classplan';
 var port = process.env.PORT || 3005;
 
 var app = express();
